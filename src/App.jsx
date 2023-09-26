@@ -11,7 +11,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Songs />} />
-        <Route path="/lyrics" element={<Lyrics />} />
+        <Route path="/lyrics/track/:commontrack_id" element={<Lyrics />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
