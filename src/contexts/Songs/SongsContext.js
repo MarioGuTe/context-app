@@ -5,6 +5,7 @@ import { chartTracksGet, trackSearch } from "../../constants/index";
 export const SongsContext = createContext();
 
 // Recursos del component provider
+// el prop children se retorna al final del código
 const SongsContextProvider = ({ children }) => {
   const [doneFetch, setDoneFetch] = useState();
   const [currentQTrack, setCurrentQTrack] = useState("");
