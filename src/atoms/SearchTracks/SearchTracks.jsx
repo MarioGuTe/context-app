@@ -1,7 +1,25 @@
-import React from "react";
+import Paper from "@material-ui/core/Paper";
+import TextField from "@material-ui/core/TextField";
+import IconButton from "@material-ui/core/IconButton";
+import SearchIcon from "@material-ui/icons/Search";
 
-const SearchTracks = () => {
-  return <div>This is SearchTracks</div>;
-};
+const SearchTracks = ({ validateQTrack }) => (
+  <Paper className="paper defaultPaper">
+    <TextField
+      id="q_track"
+      label="Track"
+      margin="normal"
+      variant="outlined"
+      onKeyUp={(e) => {
+        if (e.key === "Enter") {
+          validateQTrack(e);
+        }
+      }}
+    />
+    <IconButton onClick={(e) => validateQTrack(e)}>
+      <SearchIcon />
+    </IconButton>
+  </Paper>
+);
 
 export default SearchTracks;
