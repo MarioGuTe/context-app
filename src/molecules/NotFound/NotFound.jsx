@@ -1,7 +1,11 @@
-import React from "react";
+import Message from "../../atoms/Message/Message";
+import ButtonPrimary from "../../atoms/ButtonPrimary/ButtonPrimary";
 
-const NotFound = () => {
-  return <div>the page you requested was not found</div>;
-};
+const NotFound = () => (
+  <>
+    <Message text="404: Not Found" />
+    <ButtonPrimary type="back" to="/" />
+  </>
+);
 
 export default NotFound;

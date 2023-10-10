@@ -1,11 +1,8 @@
 import React, { createContext, useState, useEffect } from "react";
 import { chartTracksGet, trackSearch } from "../../constants/index";
 
-// Creación del contexto
 export const SongsContext = createContext();
 
-// Recursos del component provider
-// el prop children se retorna al final del código
 const SongsContextProvider = ({ children }) => {
   const [doneFetch, setDoneFetch] = useState();
   const [currentQTrack, setCurrentQTrack] = useState("");
@@ -16,7 +13,6 @@ const SongsContextProvider = ({ children }) => {
     getTopTracks();
   }, []);
 
-  //   Lógica para página de Songs
   const getTopTracks = () => {
     fetch(chartTracksGet())
       .then((res) => res.json())
@@ -53,7 +49,6 @@ const SongsContextProvider = ({ children }) => {
     }
   };
 
-  //   retorno de propiedades a disponibilizar
   return (
     <SongsContext.Provider value={{ doneFetch, text, tracks, validateQTrack }}>
       {children}

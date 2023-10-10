@@ -1,4 +1,3 @@
-// referencias de valores fijos provenientes del api
 const cors_anywhere = "https://cors-anywhere.herokuapp.com/";
 const base_url = "https://api.musixmatch.com/ws/1.1/";
 const chart_tracks_get =
@@ -8,7 +7,7 @@ const track_search_params =
   "&page=1&page_size=10&f_has_lyrics=1&s_track_rating=desc";
 const track_lyrics_get = "track.lyrics.get?commontrack_id=";
 const track_get = "track.get?commontrack_id=";
-const api_key = "&apikey=49fccf44c19c893e5c828c4afe664d76";
+const api_key = "&apikey=a34497975779b39f9623e5993c2c05ba";
 
 // funciones que van a envolver las apis
 export const chartTracksGet = () =>
